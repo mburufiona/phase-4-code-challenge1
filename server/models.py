@@ -57,7 +57,7 @@ class Power(db.Model):
 
 # HeroPower Model
 class HeroPower(db.Model):
-    __tablename__ = 'hero_powers'  # Fix: Use double underscores for __tablename__
+    __tablename__ = 'hero_powers' 
     
     id = db.Column(db.Integer, primary_key=True)
     strength = db.Column(db.String(10), nullable=False)
@@ -78,5 +78,5 @@ class HeroPower(db.Model):
             raise ValueError('Strength must be Strong, Weak, or Average')
         return strength
 
-    def __repr__(self):  # Fix: Use double underscores for __repr__
+    def __repr__(self):  
         return f'<HeroPower {self.id}>'
